@@ -1,9 +1,10 @@
 """
 Hawaii Aloha Q & A 
-Ask questions of the User.
-If receive correct response, score + 1 
+Ask user if they want to play, if so:
+Ask questions of the user about Hawaii.
+If receive correct answer, score + 1 
 If incorrect - continue to next question (minus one down the road)
-Return Score when Questionnaire is completed
+Return final score at end of questionnaire game
 """
 
 print()
@@ -28,6 +29,11 @@ answers = [
           'aloha' 
 ]
 
+play = input('Do you want to Play? yes or no? ').lower()
+
+if play != 'yes' :
+    print('Ok, maybe we play another time.')
+    quit()
 
 def question_score_user(q_list, a_list): 
     score = 0
