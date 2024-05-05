@@ -52,7 +52,7 @@ def question_score_user(q_list, a_list):
             if idx + 1 == game_len :
                 print()
                 print('Complete! ')
-                print('Final Score: ', score, '/', game_len)
+                 print('Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%')
                 print()
 
         elif user_inp != a :
@@ -60,7 +60,7 @@ def question_score_user(q_list, a_list):
             if idx + 1 == game_len :
                 print()
                 print('Complete! ')
-                print('Final Score: ', score, '/', game_len)
+                 print('Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%')
                 print()
           
 question_score_user(questions, answers)
