@@ -8,7 +8,7 @@ Return final score at end of questionnaire game
 """
 
 print()
-print('Hawaii Question and Answer'.upper())
+print('🏝️    Hawaii Question and Answer Game   🏝️'.upper())
 print('We ask a question, you input your response. \n Receive one point for each correct answer and spelling matters!')
 print()
 
@@ -32,8 +32,10 @@ answers = [
 play = input('Do you want to Play? yes or no? ').lower()
 
 if play != 'yes' :
-    print('Ok, maybe we play another time.')
+    print('Ok, maybe we play another time.  🙃')
     quit()
+if play == 'yes' : 
+    print("Let's Play! 😃")
 
 def question_score_user(q_list, a_list): 
     score = 0
@@ -47,20 +49,26 @@ def question_score_user(q_list, a_list):
         
         if user_inp == a :
             score += 1
-            print(user_inp, 'is correct answer.')
+            print(user_inp, 'is correct answer. 🤩')
             print('Score: ', score)
             if idx + 1 == game_len :
                 print()
                 print('Complete! ')
-                 print('Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%')
+                if score < 3 : 
+                    print(' 🧐 Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%  🏝️')
+                else :
+                    print(' 🤩 Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%  🏝️')
                 print()
 
         elif user_inp != a :
-            print(user_inp, ' is incorrect answer.')
+            print(user_inp, ' is incorrect answer. 😕')
             if idx + 1 == game_len :
                 print()
                 print('Complete! ')
-                 print('Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%')
+                if score < 3 : 
+                    print(' 🧐  Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%  🏝️')
+                else :
+                    print('🤩  Final Score: ', score, '/', game_len, ' = ', str((score/game_len)*100) + '%  🏝️')
                 print()
           
 question_score_user(questions, answers)
